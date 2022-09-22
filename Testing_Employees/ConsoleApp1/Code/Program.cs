@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using ConsoleApp1;
+namespace ConsoleApp1.Code;
 
 public class Program
 {
