@@ -12,9 +12,9 @@ public class Employee
     
     // I use the enums to have track of what numbers translates to
 
-    private enum Department
+    public enum Department
     {
-        HR = 1,
+        HR = 9,
         Finance = 2,
         IT = 3,
         Sales = 4,
@@ -75,11 +75,10 @@ public class Employee
 
     public void SetDepartment(string department)
     {
-
         switch (department)
         {
             case "HR":
-                _department = Department.HR; 
+                _department = Department.HR;
                 break;
             case "Finance":
                 _department = Department.Finance;
@@ -87,17 +86,49 @@ public class Employee
             case "IT":
                 _department = Department.IT;
                 break;
-            case "":
+            case "Sales":
+                _department = Department.Sales;
+                break;
+            case "General Services":
+                _department = Department.GeneralServices;
+                break;
             default:
-
+                Console.WriteLine("Error: Department don't exist");
+                break;
         }
-        
 
-
-        _department = department;
     }
 
-    public int GetDepartment()
+
+    public void SetDepartment(int department)
+    {
+        switch (department)
+        {
+            case 1:
+                _department = Department.HR;
+                break;
+            case 2:
+                _department = Department.Finance;
+                break;
+            case 3:
+                _department = Department.IT;
+                break;
+            case 4:
+                _department = Department.Sales;
+                break;
+            case 5:
+                _department = Department.GeneralServices;
+                break;
+            default:
+                Console.WriteLine("Error: Department don't exist");
+                break;
+        }
+
+    }
+
+
+
+    public Department GetDepartment()
     {
         return _department;
     }

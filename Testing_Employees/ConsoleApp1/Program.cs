@@ -6,6 +6,12 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        var employee1 = new Employee();
+        
+        employee1.SetDepartment(1);
+
+        Console.WriteLine(employee1.GetDepartment());
+
 
     }
 
