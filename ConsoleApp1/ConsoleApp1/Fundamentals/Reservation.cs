@@ -1,8 +1,8 @@
-﻿namespace TestNinja.Fundamentals
+﻿namespace ConsoleApp1.Fundamentals
 {
     public class Reservation
     {
-        public User MadeBy { get; set; }
+        private User MadeBy { get; set; }
 
         public bool CanBeCancelledBy(User user)
         {
